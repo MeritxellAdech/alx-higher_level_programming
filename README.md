@@ -1,4 +1,4 @@
-# Python - Hello, World
+# Python
 This repository holds all the source code for every single project assigned at ALX SE under this topic.
 
 ## Concepts
