@@ -11,5 +11,5 @@ class MyList(list):
         prints the list of sorted elements
         """
         new_list = self.copy()
-        mew_list.sort()
+        new_list.sort()
         print(new_list)
