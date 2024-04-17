@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" This module has a function the reads from a file"""
+
 
 def read_file(filename=""):
     """
@@ -9,6 +11,6 @@ def read_file(filename=""):
             the path to the file
     """
 
-    with open(filename, "r", encoding="utf-8") as file:
+    with open(filename, "r", encoding="UTF-8") as file:
         for line in file:
             print(line, end="")
