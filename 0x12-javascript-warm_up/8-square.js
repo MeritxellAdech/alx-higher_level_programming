@@ -2,23 +2,40 @@
 const { argv } = require('process');
 
 function square (size) {
-  if (isNaN(parseInt(size))) {
+  if (!Number(size)) {
     console.log('Missing size');
     return;
   }
 
-  let i = 0;
-  let j = 0;
+  let index = 0;
   let row = '';
-  const times = parseInt(size);
-  while (i < times) {
-    while (j < times) {
-      row += 'x';
-      j++;
+  let i = 0;
+  // let flagToPrint = false;
+  const times = Number(size);
+
+  while (index < times) {
+    while (i < times) {
+      row += 'X';
+      i++;
     }
     console.log(row);
-    i++;
+    index++;
   }
+
+  // while (index < times) {
+  //   if (!flagToPrint) {
+  //     row += 'X';
+  //   } else {
+  //     console.log(row);
+  //   }
+
+  //   index++;
+
+  //   if (index === times && !flagToPrint) {
+  //     flagToPrint = true;
+  //     index = 0;
+  //   }
+  // }
 }
 
 square(argv[2]);
