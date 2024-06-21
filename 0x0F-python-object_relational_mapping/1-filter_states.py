@@ -18,8 +18,9 @@ if __name__ == "__main__":
         db=DBNAME,
         charset="utf8"
         )
+    QUERY = "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC"
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC")
+    cur.execute(QUERY)
     n_states = cur.fetchall()
     for state in n_states:
         print(state)
